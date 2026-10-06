@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-06T17:26:27Z",
-  "generated_at_kst": "2026-10-07 02:26:27 KST",
+  "generated_at_utc": "2026-10-06T21:54:55Z",
+  "generated_at_kst": "2026-10-07 06:54:55 KST",
   "ma_window": 200,
   "source": "Yahoo Finance (v8 chart API)",
   "indices": [
@@ -8,9 +8,9 @@
       "flag": "🇺🇸",
       "name": "미국 S&P500",
       "symbol": "^GSPC",
-      "price": 7821.97,
-      "ma": 7236.19,
-      "diff_pct": 8.1,
+      "price": 7818.93,
+      "ma": 7236.17,
+      "diff_pct": 8.05,
       "is_bull": true,
       "ok": true,
       "stale": false

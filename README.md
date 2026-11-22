@@ -116,6 +116,26 @@ streamlit run src/monitor/dashboard.py   # http://localhost:8501
 
 ---
 
+## 🔒 홈페이지 접근 제한 (Access Gate)
+
+공식 홈페이지([docs/](docs/))는 초대받은 사용자를 위한 정보 공간입니다. 접속 시 코드 게이트가 표시되며, 올바른 접속 코드를 입력해야 열람할 수 있습니다.
+
+- 구현: [`docs/assets/site.js`](docs/assets/site.js)의 `initAuth()` / `unlock()`
+- 설정: [`docs/config/access.json`](docs/config/access.json) 에 접속 코드의 **SHA-256 해시만** 저장 (평문 비밀번호는 저장하지 않음)
+- 동작: 입력한 코드를 브라우저에서 SHA-256으로 해시한 뒤 `access.json`의 `digest` 값과 비교해, 일치하면 `sessionStorage`에 접근 허용 상태를 기록합니다.
+
+> ⚠️ 정적 사이트의 간단한 접근 제한이며, 민감정보 보호 목적이 아닙니다. 해시가 클라이언트에 노출되므로 진짜 보안 경계로 사용하지 마세요.
+
+### 접속 코드 변경 방법
+1. 새 코드를 정합니다.
+2. SHA-256 해시를 계산합니다.
+   ```bash
+   node -e "const c=require('crypto');console.log(c.createHash('sha256').update('새코드').digest('hex'))"
+   ```
+3. [`docs/config/access.json`](docs/config/access.json)의 `digests` 값을 교체하고 `version`을 올립니다. (`version`을 올리면 기존 세션의 접근 허용이 무효화되어 재입력을 요구합니다.)
+
+---
+
 ## ⚠️ 면책 조항 및 투자 위험 고지 (Disclaimer)
 
 > **본 프로젝트(Stock Quant Trader)는 "1개월 내 10배 수익" 등 어떠한 형태의 특정 수익률 달성도 절대 보장하지 않습니다.**

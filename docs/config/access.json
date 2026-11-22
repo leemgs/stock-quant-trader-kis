@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "algorithm": "SHA-256",
+  "note": "접속 코드의 SHA-256 해시만 저장합니다(평문 저장 안 함). 정적 사이트의 간단한 접근 제한이며 진짜 보안 경계가 아닙니다.",
+  "digests": [
+    "af36ce4dfe30e46821f11b640e9cc2d178a9c04a66f0d18cb21273358abeefaa",
+    "a05f757677aa59387f11e957a42ed160dfab5539f7ce9f968daa66b7a29c0950"
+  ]
+}

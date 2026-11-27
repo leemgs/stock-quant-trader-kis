@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-27T15:39:37Z",
-  "generated_at_kst": "2026-11-28 00:39:37 KST",
+  "generated_at_utc": "2026-11-27T23:46:15Z",
+  "generated_at_kst": "2026-11-28 08:46:15 KST",
   "ma_window": 200,
   "source": "Yahoo Finance (v8 chart API)",
   "indices": [
@@ -8,9 +8,9 @@
       "flag": "🇺🇸",
       "name": "미국 S&P500",
       "symbol": "^GSPC",
-      "price": 7271.12,
-      "ma": 7354.14,
-      "diff_pct": -1.13,
+      "price": 7297.49,
+      "ma": 7354.27,
+      "diff_pct": -0.77,
       "is_bull": false,
       "ok": true,
       "stale": false
@@ -30,9 +30,9 @@
       "flag": "🇭🇰",
       "name": "홍콩 HSI",
       "symbol": "^HSI",
-      "price": 22694.77,
-      "ma": 25002.82,
-      "diff_pct": -9.23,
+      "price": 22226.88,
+      "ma": 25023.58,
+      "diff_pct": -11.18,
       "is_bull": false,
       "ok": true,
       "stale": false
